@@ -740,4 +740,20 @@ h1 {
     .informacion_overworld {
         width: 100%;
     }
+
+    .section_mobs {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        grid-template-areas:
+            "titulo titulo"
+            "creeper zombie"
+            "spider esqueleto";
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .section_mobs article:nth-child(1) img {
+        height: 100%;
+        width: auto;
+    }
 }

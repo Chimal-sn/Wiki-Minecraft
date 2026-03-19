@@ -378,10 +378,11 @@ h1 {
 .section_mobs {
     padding: 30px;
     display: grid;
-    grid-template-columns: 1fr 25% 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 25%) minmax(0, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 10px 20px;
     height: 80dvh;
+    width: 100%;
     overflow: hidden;
     grid-template-areas:
         "creeper titulo spider"
@@ -412,7 +413,7 @@ h1 {
 .section_mobs article:nth-child(1) h2 {
     font-family: 'Minecrafter', sans-serif;
     color: #ffffff;
-    font-size: 3rem;
+    font-size: min(3rem, 5vw);
     font-weight: lighter;
     text-align: center;
 }
@@ -430,15 +431,19 @@ h1 {
     text-align: center;
 }
 
-.mob {}
+.article_mob {
+    overflow: hidden;
+}
 
 .img_mob {
     height: 80%;
+    overflow: hidden;
 }
 
 .img_mob img {
     height: 100%;
     width: auto;
+    overflow: hidden;
 }
 
 .section_mobs article:nth-child(2) {
@@ -633,6 +638,34 @@ h1 {
     .info_mineral p {
         font-size: 0.8rem;
     }
+
+    .section_mobs {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        grid-template-areas:
+            "titulo titulo"
+            "creeper zombie"
+            "spider esqueleto";
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .section_mobs article:nth-child(1) img {
+        height: 100%;
+        width: auto;
+        overflow: hidden;
+    }
+
+    .section_mobs article:nth-child(1) h2 {
+        font-size: 2rem;
+    }
+
+    .article_mob h3 {
+        font-size: 1.5rem;
+    }
+
+
+
 }
 
 
@@ -658,6 +691,30 @@ h1 {
 
     .informacion_overworld {
         width: 100%;
+    }
+
+    .section_mobs {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        grid-template-areas:
+            "titulo titulo"
+            "creeper zombie"
+            "spider esqueleto";
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .section_mobs article:nth-child(1) img {
+        height: 100%;
+        width: auto;
+    }
+
+    .section_mobs article:nth-child(1) h2 {
+        font-size: 2rem;
+    }
+
+    .article_mob h3 {
+        font-size: 1.5rem;
     }
 }
 

@@ -1,0 +1,599 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Minecrafter';
+    src: url('src/fonts/Minecrafter.Reg.ttf') format('truetype');
+}
+
+body {
+    background-color: #000000;
+}
+
+
+nav {
+    padding: 10px 50px 20px 50px;
+    background-color: #1c1c1c;
+}
+
+.logo {
+    display: flex;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.logo p {
+    font-family: 'Minecrafter', sans-serif;
+    align-self: center;
+}
+
+.logo img {
+    width: 5%;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 2px 5px;
+    transition:
+        color 350ms ease-in-out,
+        background-color 350ms ease-in-out,
+        border-radius 350ms ease-in-out;
+}
+
+.menu a:hover {
+    color: #1c1c1c;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+/*Contenedor Hero*/
+h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    font-family: 'Minecrafter', sans-serif;
+    font-weight: lighter;
+    margin-bottom: .2em;
+}
+
+.hero {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    z-index: 3;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(src/img/fondo_hero.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+.contenedorP_hero {
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+
+/*Seccion de overworld*/
+.section_overworld {
+    background-color: #7BB14A;
+    display: flex;
+    padding: 40px;
+    position: relative;
+}
+
+.titulo_overworld {
+    display: flex;
+    width: 45%;
+}
+
+.titulo_overworld img {
+    width: 50%;
+}
+
+.titulo_overworld h2 {
+    font-family: 'Minecrafter', sans-serif;
+    font-weight: lighter;
+    font-size: 3.5rem;
+    color: #ffffff;
+    position: absolute;
+    left: 15%;
+    z-index: 2;
+}
+
+.titulo_overworld p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: right;
+    position: absolute;
+    top: 90px;
+}
+
+.informacion_overworld {
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    padding: 20px;
+    gap: 30px;
+}
+
+.contenedor_info {
+    background-color: #6B5039;
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 30px);
+}
+
+.img_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50%;
+}
+
+.img_info h3 {
+    font-family: 'Minecrafter', sans-serif;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.info_overworld {
+    padding: 10px;
+}
+
+.info_overworld p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.info_overworld hr {
+    border: 1px solid #7BB14A;
+}
+
+.ciclo {
+    background-image: url(src/img/fondo_ciclo.webp);
+}
+
+.clima {
+    background-image: url(src/img/fondo_clima.webp);
+}
+
+.vegetacion {
+    background-image: url(src/img/fondo_vegetacion.webp);
+}
+
+.flora {
+    background-image: url(src/img/fondo_flora.webp);
+}
+
+/*Seccion de cuevas*/
+.section_cuevas {
+    width: 100%;
+}
+
+.img_cueva img {
+    width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+}
+
+.informacion_cuevas {
+    display: flex;
+    flex-direction: column;
+    background-image: url(src/img/fondo_cuevas.webp);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 40px;
+    position: relative;
+}
+
+
+.informacion_cuevas .header_cuevas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 70px;
+    gap: 5em;
+
+}
+
+.antorcha {
+    position: absolute;
+    top: 60px;
+    left: 250px;
+}
+
+.antorcha img {
+    width: 50%;
+}
+
+.titulo_cuevas {
+    flex: 1;
+}
+
+.titulo_cuevas h2 {
+    font-family: 'Minecrafter', sans-serif;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.titulo_cuevas p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.contenedor_consejos {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+
+.child_consejo {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url(src/img/cartel.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    height: 100%;
+    flex: 1;
+    max-width: 35%;
+}
+
+.child_consejo h3 {
+    font-family: 'Minecrafter', sans-serif;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.child_consejo p {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/*Minerales*/
+.Minerales h3 {
+    font-family: 'Minecrafter', sans-serif;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: lighter;
+    margin-bottom: 40px;
+}
+
+.contenedor_minerales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.mineral {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.28);
+    width: 313px;
+    height: 300px;
+    border: 1px solid #ffffff;
+    transition:
+        transform 350ms ease,
+        box-shadow 350ms ease,
+        background-color 500ms ease-in-out;
+}
+
+.mineral:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.imagen_mineral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+}
+
+.imagen_mineral img {
+    width: 170px;
+}
+
+.info_mineral {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 14px;
+    flex: 1;
+}
+
+.info_mineral h4 {
+    font-family: 'Minecrafter', sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.info_mineral p {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.info_mineral.comun :nth-child(3) {
+    background-color: #91919A;
+    padding: 3px;
+    align-self: self-start;
+}
+
+.info_mineral.poco_comun :nth-child(3) {
+    background-color: #7373DA;
+    padding: 3px;
+    align-self: self-start;
+}
+
+.info_mineral.raro :nth-child(3) {
+    background-color: #DAA520;
+    padding: 3px;
+    align-self: self-start;
+}
+
+.footer {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media (width <480px) {
+
+    nav {
+        padding: 15px;
+    }
+
+    .hero {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .section_overworld {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .titulo_overworld {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .titulo_overworld h2,
+    .titulo_overworld p {
+        position: static;
+        text-align: start;
+    }
+
+    .titulo_overworld h2 {
+        font-size: 2rem;
+    }
+
+    .titulo_overworld p {
+        font-size: 1rem;
+    }
+
+
+    .informacion_overworld {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contenedor_info {
+        width: 100%;
+        height: 120px;
+    }
+
+    .img_info {
+        flex: 2;
+        height: auto;
+    }
+
+    .info_overworld {
+        flex: 1;
+    }
+
+    .contenedor_info h3 {
+        font-size: 1rem;
+    }
+
+    .info_overworld p {
+        font-size: 0.8rem;
+    }
+
+
+    .img_cueva img {
+        display: none;
+    }
+
+    .img_cueva {
+        height: 50vh;
+        background-image: url(src/img/fondo_transicionC.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .informacion_cuevas {
+        padding: 25px;
+    }
+
+    .informacion_cuevas .header_cuevas {
+        margin-top: 0;
+        flex-direction: column;
+        gap: 2em;
+        margin-bottom: 20px;
+    }
+
+    .antorcha {
+        top: 1%;
+        left: 45%;
+    }
+
+
+    .antorcha img {
+        width: 30%;
+    }
+
+    .titulo_cuevas h2 {
+        font-size: 2.5rem;
+    }
+
+    .titulo_cuevas p {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .contenedor_consejos {
+        width: 100%;
+        gap: 2em;
+    }
+
+    .child_consejo {
+        width: 100%;
+        max-width: 100%;
+        height: 150px;
+        min-height: 150px;
+    }
+
+    .child_consejo h3 {
+        font-size: 1.5rem;
+    }
+
+    .child_consejo p {
+        font-size: 0.8rem;
+    }
+
+    .Minerales h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .mineral {
+        width: 140px;
+        height: 200px;
+    }
+
+    .imagen_mineral {
+        flex: 1;
+    }
+
+    .imagen_mineral img {
+        width: 100px;
+    }
+
+    .info_mineral {
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .info_mineral h4 {
+        font-size: 1rem;
+    }
+
+    .info_mineral p {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/*Tablets*/
+@media (481px <=width <=768px) {
+    .section_overworld {
+        flex-direction: column;
+    }
+
+    .titulo_overworld {
+        width: 55%;
+    }
+
+    .titulo_overworld h2 {
+        font-size: 3rem;
+        left: 25%;
+    }
+
+    .contenedor_info {
+        height: 150px;
+    }
+
+    .informacion_overworld {
+        width: 100%;
+    }
+}
+
+/*Laptops*/
+@media (769px <=width <=1024px) {
+    .section_overworld {
+        flex-direction: column;
+    }
+
+    .titulo_overworld {
+        width: 55%;
+    }
+
+    .titulo_overworld h2 {
+        font-size: 3rem;
+        left: 25%;
+    }
+
+    .contenedor_info {
+        height: 150px;
+    }
+
+    .informacion_overworld {
+        width: 100%;
+    }
+}

@@ -379,6 +379,44 @@ h1 {
     justify-content: center;
 }
 
+/*Seccion de mobs*/
+
+.section_mobs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 20px;
+    grid-template-areas:
+        "creeper titulo spider"
+        "creeper titulo spider"
+        "zombie titulo esqueleto"
+        "zombie titulo esqueleto";
+}
+
+.section_mobs article {
+    background-color: #7BB14A;
+
+}
+
+.section_mobs article:nth-child(1) {
+    grid-area: titulo;
+}
+
+.section_mobs article:nth-child(2) {
+    grid-area: creeper;
+}
+
+.section_mobs article:nth-child(3) {
+    grid-area: zombie;
+}
+
+.section_mobs article:nth-child(4) {
+    grid-area: spider;
+}
+
+.section_mobs article:nth-child(5) {
+    grid-area: esqueleto;
+}
+
 @media (width <480px) {
 
     nav {

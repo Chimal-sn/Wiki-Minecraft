@@ -382,8 +382,11 @@ h1 {
 /*Seccion de mobs*/
 
 .section_mobs {
+    padding: 30px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    height: 80dvh;
+    max-height: 80dvh;
+    grid-template-columns: 2fr, 1fr, 2fr;
     gap: 10px 20px;
     grid-template-areas:
         "creeper titulo spider"
@@ -394,12 +397,61 @@ h1 {
 
 .section_mobs article {
     background-color: #7BB14A;
-
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
+
 
 .section_mobs article:nth-child(1) {
     grid-area: titulo;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
 }
+
+.section_mobs article:nth-child(1) h2 {
+    font-family: 'Minecrafter', sans-serif;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.section_mobs article:nth-child(1) img {
+    width: 100%;
+    height: auto;
+}
+
+.article_mob h3 {
+    font-family: 'Minecrafter', sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.mob {
+    flex: 1;
+}
+
+.img_mob {
+    background-color: #000000;
+    flex: 2;
+}
+
+.img_mob img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
 
 .section_mobs article:nth-child(2) {
     grid-area: creeper;
@@ -417,6 +469,8 @@ h1 {
     grid-area: esqueleto;
 }
 
+
+/*Responsive*/
 @media (width <480px) {
 
     nav {

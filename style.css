@@ -372,22 +372,17 @@ h1 {
     align-self: self-start;
 }
 
-.footer {
-    display: flex;
-    padding: 20px;
-    gap: 10px;
-    justify-content: center;
-}
 
 /*Seccion de mobs*/
 
 .section_mobs {
     padding: 30px;
     display: grid;
-    height: 80dvh;
-    max-height: 80dvh;
-    grid-template-columns: 2fr, 1fr, 2fr;
+    grid-template-columns: 1fr 25% 1fr;
+    grid-template-rows: repeat(4, 1fr);
     gap: 10px 20px;
+    height: 80dvh;
+    overflow: hidden;
     grid-template-areas:
         "creeper titulo spider"
         "creeper titulo spider"
@@ -396,11 +391,14 @@ h1 {
 }
 
 .section_mobs article {
-    background-color: #7BB14A;
+    background-color: #1C1C1C;
     display: flex;
-    padding: 20px;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
 }
 
 
@@ -421,37 +419,27 @@ h1 {
 
 .section_mobs article:nth-child(1) img {
     width: 100%;
-    height: auto;
+    overflow: hidden;
 }
 
 .article_mob h3 {
     font-family: 'Minecrafter', sans-serif;
     color: #ffffff;
-    font-size: 2.5rem;
+    font-size: min(2.5rem, 5vw);
     font-weight: lighter;
     text-align: center;
 }
 
-.mob {
-    flex: 1;
-}
+.mob {}
 
 .img_mob {
-    background-color: #000000;
-    flex: 2;
+    height: 80%;
 }
 
 .img_mob img {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    width: auto;
 }
-
-
-
-
-
-
-
 
 .section_mobs article:nth-child(2) {
     grid-area: creeper;
@@ -469,6 +457,13 @@ h1 {
     grid-area: esqueleto;
 }
 
+/*Footer*/
+.footer {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    justify-content: center;
+}
 
 /*Responsive*/
 @media (width <480px) {
